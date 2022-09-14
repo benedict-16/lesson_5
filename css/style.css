@@ -1,0 +1,107 @@
+:root {
+  --size: 200px;
+  --border-size: 2px;
+  --margin-size: 30px;
+}
+* {
+  box-sizing: border-box;
+}
+.container {
+  height: calc(var(--size) + var(--border-size) * 2);
+  background-color: grey;
+  float: left;
+  margin: var(--margin-size);
+  position: relative;
+  border: var(--border-size) solid;
+}
+.container--sm {
+  width: calc(var(--size) + var(--border-size) * 2);
+}
+.container--lg {
+  width: calc(var(--size) * 2 + var(--border-size) * 2);
+  margin-left: 0;
+}
+.block {
+  width: 50%;
+  height: 50%;
+  background-color: yellow;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  color: white;
+}
+.block--in-lg {
+  width: 40%;
+  height: 80%;
+}
+.block--1 {
+  background-color: green;
+  top: 0;
+  left: 0;
+}
+.block--2 {
+  background-color: white;
+  top: 0;
+  left: 50%;
+}
+.block--3 {
+  background-color: red;
+  top: 50%;
+  left: 50%;
+}
+.block--4 {
+  background-color: black;
+  top: 50%;
+  left: 0;
+}
+.block--5 {
+  background-color: blue;
+  left: 0;
+  bottom: 0;
+  transform: translate(-40%, 70%);
+  z-index: -1;
+}
+.block--6 {
+  background-color: blue;
+  left: 50%;
+  bottom: 0;
+  transform: translate(-50%, 70%);
+  z-index: 1;
+}
+.block--7 {
+  background-color: blue;
+  bottom: 0;
+  right: 0;
+  transform: translate(40%, 70%);
+  z-index: -1;
+}
+.block-lg {
+  background-color: red;
+  position: absolute;
+  top: var(--margin-size);
+  right: var(--margin-size);
+  bottom: var(--margin-size);
+  left: var(--margin-size);
+}
+.container--menu {
+  border-color: rgb(240, 248, 255);
+}
+.container--menu:hover {
+  border-color: black; 
+  background-color: yellow;
+}
+.container--menu:hover > div {
+  background-color: rgb(0, 255, 13);
+  color: black;
+}
+.block--menu {
+  width: 100%;
+  height: 25%;
+  background-color: rgb(255, 0, 0);
+}
+.block--photo {
+  bottom: 0;
+  right: 0;
+  transform: translate(-50%, -40%);
+}
